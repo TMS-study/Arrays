@@ -109,6 +109,10 @@ for (let i = 0; i < arr1.length; i++) {
 newArr.shift();
 console.log(newArr.join(''));
 
+//Эталонное решение
+const binary = [0, 0, 0, 0]
+let binaryStr = binary.join('1') // еденицу можно добавить разделителем
+
 // ADVANCED level
 // Task 1
 /* Реализуйте функцию которая будет проверять, является ли слово палиндромом.*/
@@ -124,9 +128,7 @@ function isPalindrom(str: string): boolean{
     
     const arr1: string = arr.reverse().join('');
 
-    if(arr1 === str){
-        return true
-    }else return false
+    return arr1 === str;
     
 }
     console.log(isPalindrom('alla'));
@@ -174,7 +176,7 @@ const plusNumber: number[] = [];
 const minusNumber: number[] = [];
 
 for(let el of mixedNumbers){
-    if ( el > 0 || el === 0){
+    if ( el >= 0 || el === 0){
         plusNumber.push(el);
     } else {
         minusNumber.push(el);
